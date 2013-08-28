@@ -1,0 +1,11 @@
+$ telnet garrod.isri.cmu.edu 80
+
+GET /webapps/methods/check-get?andrewid=a&color=g HTTP/1.1
+host:garrod.isri.cmu.edu
+
+POST /webapps/methods/check-post HTTP/1.1
+host:garrod.isri.cmu.edu
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 19
+
+andrewid=a&color=g
