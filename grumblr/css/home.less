@@ -1,0 +1,197 @@
+@import (less) "bootstrap.css";
+@light-gray: #cccccc;
+/*@trans-light-blue: rgba(193, 214, 233, 0.17);*/
+@trans-light-blue: rgba(192, 200, 202, 0.17);
+/*@trans-dark-blue:rgba(197, 217, 235, 0.49);*/
+@trans-dark-blue: rgba(153, 178, 184, 0.12);
+@dark-gray: #4B4E52;
+@border:#e0e0e0;
+@header: #1C354B;
+/*@glyficon: rgba(70, 135, 190, 0.82);*/
+@glyficon:#2a6496;
+@glyficon-hover: rgba(33, 69, 124, 0.99);
+@glyficon-selected: white;
+@msg-height:140px;
+@brand:#B6B9CC;
+body {
+	background-image: url('../img/wavegrid.png');
+}
+.header {
+	.navbar;
+	.navbar-default;
+	background-color: @header;
+	border:none;
+}
+.brand a{
+	.navbar-brand;
+	font-family: 'Syncopate', courtesy;
+	color: @brand;
+	text-decoration: none;
+
+}
+.search-bar {
+	.navbar-nav;
+	float:right;
+	padding-right: 30px;
+	width:25%;
+	.input-group;
+}
+.search-box {
+	.form-control;
+	padding:3px;
+	padding-left: 10px;
+	border:1px solid lighten(@header,20%);
+	height:34px;
+	border-radius: 13px;
+	box-shadow: none;
+	outline:none;
+	background-color:#D3DDE5;
+}
+.search-box:focus {
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	background-color: #fefefe;
+}
+.all-icons {
+	text-decoration: none;
+	font-size: 18px;
+}
+div .search-icon {
+	.all-icons;
+	.input-group-addon;
+	border:none;
+	background: none;
+}
+.content {
+	.row;
+	width:70%;
+	padding-top: 3%;
+	margin: auto;
+	height: 100%;
+	background-color: @trans-light-blue;
+	box-shadow: -5px 5px 5px #eeeeee;
+
+}
+.vertical-nav-col {
+	.col-md-3;
+	/*width:25%;*/
+	text-align: center;
+}
+.profile-img {
+	width: 100%;
+	border-radius: 10px;
+}
+.content-col {
+	.col-md-9;
+	width:75%;
+}
+.vertical-nav  :not(:first-child) {
+	background-color: @trans-dark-blue;
+	margin-top:5px;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	text-decoration:none;
+	color:@dark-gray;
+	padding-top:5px;
+	padding-bottom: 5px;
+}
+
+.vertical-nav  :not(:first-child):hover {
+	background-color:darken(@trans-dark-blue,30%);
+  	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	text-decoration:none;
+  	margin-top:5%;
+  	/*padding-left: 8%;*/
+
+}
+.vertical-nav .nav-item a{
+	color: @dark-gray;
+}
+.vertical-nav  :not(:first-child) a{
+	text-decoration: none;
+}
+.grumblr-container {
+	.row;
+	position:relative;
+	background-color: @trans-dark-blue;
+	margin-right: 0px;
+	margin-bottom: 15px;
+	height: 140px;
+}
+.grumblr-img-box {
+	width:25%;
+	float:left;
+	padding:2%;
+	height: 100%;
+}
+.grumblr-img {
+	border-radius: 5px;
+	width:100%;
+}
+.grumblr-words {
+	position:relative;
+	padding:3%;
+	width:70%;
+	height: 100%;
+	float:left;
+	color: @dark-gray;
+}
+.icon {
+	.all-icons;
+	padding-right: 5px;
+	border:none;
+	background: none;
+	color:@glyficon;
+}
+.icon:hover {
+	.all-icons;
+	color:@glyficon-hover;
+}
+.clear {
+	clear:both;
+}
+.grumblr-words:hover > .actions {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: visibility 0.5s ease-in-out, opacity 0.5s linear;
+}
+.actions {
+	opacity: 0;
+	visibility: hidden;
+	position:absolute;
+	bottom:15px;
+	width:100%;
+}
+.selected {
+	color:@glyficon-selected;
+}
+
+.comments {
+	border:1px solid @glyficon;
+	border-radius: 10px;
+	outline:none;
+	background: none;
+	padding-left: 0.5em;
+	padding-top: 0.3em;
+	width:0;
+	visibility: hidden;/*
+	transition:width 1s;
+	-webkit-transition:width 1s，visibility 1s linear;*/
+
+}
+.comments-show {
+	visibility: visible;
+	width:75%;
+	transition:width 1s;
+	-webkit-transition:width 1s;
+}
+.footer {
+	width:75%;
+	margin:auto;
+	margin-top: 30px;
+	height:50px;
+	border-top: 1px solid #e0e0e0;
+
+}

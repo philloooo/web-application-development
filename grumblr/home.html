@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Untitled Document</title>
+
+   		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Syncopate">
+		<link href="./css/reset.css" rel="stylesheet" type="text/css">
+		<link href="./css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="./css/home.less" rel="stylesheet/less" type="text/css">
+		<script src="./js/less.js" type="text/javascript"></script>
+		<script src="./js/jquery.js" type="text/javascript"></script>
+	</head>	
+
+	<body>
+		<div class="header">
+			<div class="brand"><a href="home.html">GRUMBLR</a></div>
+			<div class="search-bar">
+				<input type="text" class="search-box" placeholder="Search" >
+				<a href="#" class="glyphicon glyphicon-search search-icon"></a>
+			</div>
+		</div>
+		<div class="content">
+			<div class="vertical-nav-col col-md-3">
+				<ul class="vertical-nav">
+					<a href="profile.html" class="profile-box"> <img class="profile-img" src="./img/profile.jpg"></a>
+					<li class="nav-item"> <a href ="#" > my profile </a> </li>
+					<li class="nav-item"> <a href ="#" > my profile </a> </li>
+					<li class="nav-item"> <a href ="#" > my profile </a> </li>
+					<li class="nav-item"> <a href ="#" > my profile </a> </li>
+				</ul>
+			</div>
+			<div class="content-col col-md-9">
+				<div class="grumblr-container">
+					<a href="#" class="grumblr-img-box">
+						<img class="grumblr-img" src="./img/usr1.jpg">
+					</a>
+					<div class="grumblr-words">
+						<p> Allaa asdf asdfkljwoei fhujs workd sdf !!!!</p>
+						<div class="actions">
+							<a href="#" class="icon glyphicon glyphicon-thumbs-down"></a>
+							<a href="#" class="icon glyphicon glyphicon-comment"></a>
+							<textarea class="comments"></textarea>
+						</div>
+					</div>
+					
+					<div class="clear"></div>
+				</div>
+				<div class="grumblr-container">
+					<a href="#" class="grumblr-img-box">
+						<img class="grumblr-img" src="./img/usr3.jpg">
+					</a>
+					<div class="grumblr-words"> 
+						<p>That's a great point. Una Manzana. Hahoho.llaa asdf asdfkljwoei fhujs workd sdf !!!!</p>
+						<div class="actions">
+							<a href="#" class="icon glyphicon glyphicon-thumbs-down"></a>
+							<a href="#" class="icon glyphicon glyphicon-comment"></a>
+							<textarea class="comments"></textarea>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="grumblr-container">
+					<a href="#" class="grumblr-img-box">
+						<img class="grumblr-img" src="./img/usr2.jpg">
+					</a>
+					<div class="grumblr-words"> 
+						<p>SHALL WE?</p>
+						<div class="actions">
+							<a href="#" class="icon glyphicon glyphicon-thumbs-down"></a>
+							<a href="#" class="icon glyphicon glyphicon-comment"></a>
+							<textarea class="comments"></textarea>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="grumblr-container">
+					<a href="#" class="grumblr-img-box">
+						<img class="grumblr-img" src="./img/usr3.jpg">
+					</a>
+					<div class="grumblr-words"> 
+						<p>Allaa asdf asdfkljwoei fhujs workd sdf !!!!</p>
+						<div class="actions">
+							<a href="#" class="icon glyphicon glyphicon-thumbs-down"></a>
+							<a href="#" class="icon glyphicon glyphicon-comment"></a>
+							<textarea class="comments"></textarea>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div style="clear: both" > </div>
+		</div>
+		<div class="footer">
+		</div>
+		<script type="text/javascript">
+		$("document").ready(function(){
+			$(".icon").click(function(){
+				if ($(this).hasClass("selected")) {
+					console.log("hasClass")
+					$(this).removeClass("selected");
+				}
+				else{
+					$(this).addClass("selected");
+				}
+				console.log("change")
+			})
+			$(".glyphicon-comment").click(function(){
+				var target=$(this).parent().children('.comments');
+				if (target.hasClass('comments-show')) {
+					target.removeClass('comments-show');
+				}
+				else{
+					$(this).parent().children(".comments").addClass("comments-show");
+				}
+			})
+		})
+
+		</script>
+	</body>
+</html>
